@@ -1,0 +1,12 @@
+<Sysmon schemaversion="4.30">
+	<EventFiltering>
+		<RuleGroup name="" groupRelation="or">
+			<ProcessCreate onmatch="exclude">
+				<Image condition="is">C:\Program Files (x86)\Admin Arsenal\PDQ Inventory\</Image>				    <!--PDQ Inventory Server Processes-->
+				<Image condition="is">C:\Windows\AdminArsenal\PDQDeployRunner\service-1\PDQDeployRunner-1.exe</Image> <!--PDQ Inventory Client Processes-->
+				<Image condition="is">C:\Windows\AdminArsenal\PDQInventory-Scanner\service-1\PDQInventory-Scanner-1.exe</Image> <!--PDQ Inventory Client Processes-->
+				<Image condition="is">C:\Windows\AdminArsenal\PDQInventory-Scanner\service-1\exec\PDQInventoryScanner.exe</Image> <!--PDQ Inventory Client Processes-->
+			</ProcessCreate>
+		</RuleGroup>
+	</EventFiltering>
+</Sysmon>
